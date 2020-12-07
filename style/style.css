@@ -1,0 +1,712 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Roboto';
+}
+h1, h2 {
+  font-size: 40px !important;
+}
+a, p, span, li {
+  font-size: 16px;
+}
+ul li {
+  list-style-type: none !important;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+		font-family: 'Roboto', sans-serif;
+		src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet");
+	}
+/****************menu et navigation************************/
+.container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-areas: 
+    "menu menu menu menu menu menu menu menu"
+    "entete-home entete-home entete-home entete-home entete-home entete-home entete-home entete-home"
+    "etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-droit etablissement-droit etablissement-droit etablissement-droit"
+    "footer-home footer-home footer-home footer-home footer-home footer-home footer-home footer-home";
+}
+/*bouton vers le haut2*/
+#button {
+  display: inline-block;
+  background-color: darkkhaki;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 30px;
+  margin-right: 5px;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  transition: background-color .3s;
+  z-index: 999999;
+  text-decoration: none;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #c0c0c0;
+  text-decoration: none;
+}
+#button:active {
+  background-color: darkkhaki;
+  text-decoration: none;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+/**********END***************/
+blockquote {
+  margin-top: 60px !important;
+  text-align: center !important;
+  padding: 30px !important;
+  font-size: 30px !important;
+}
+.bandeau-bas {
+  background-image: url(../uploads/barber-2345701_1920.jpg);
+  margin-top: 60px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.backtotop a:hover{
+  background-color:#c0c0c0; /*couleur de fond au survol*/
+  color: #ffffff !important;
+}
+.backtotop a, .backtotop a:hover{
+  transition-property: background-color; /*animation du fond */
+  transition-duration:0.5s; /* animation du fond */
+  color: #ffffff !important;
+}
+/*************END bouton retour versle haut*******************************/
+.entete-home {
+  grid-area: entete-home;
+  background-image: linear-gradient(
+        rgba(181, 112, 112, 0.6), 
+        rgba(112, 122, 181, 0.6)
+      ), url("../uploads/barbier.jpg");
+  background-size: cover;
+  background-position: center-bottom;
+  background-repeat: no-repeat;
+  height: 550px;
+  margin-top: 73px;
+
+}
+.notre-etablissement {
+  display: flex;
+  margin-top: 60px;
+  width: 80%;
+  margin: 0 auto;
+}
+.etablissement-gauche {
+  grid-area: etablissement-gauche;
+  width: 80%;
+  padding: 40px;
+}
+.etablissement-gauche h2, .etablissement-droit h2 {
+  text-align: center;
+}
+.etablissement-droit {
+  grid-area: etablissement-droit;
+  width: 80%;
+  padding: 40px;
+}
+/***********images sous a propos*******************/
+.image-a-propos {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 40px !important;
+}
+.image-propos1 {
+  grid-area: image-propos-un;
+  width: 30%;
+}
+.image-propos1:hover {
+  filter: brightness(60%);
+  transition: .2s ease-in-out;
+}
+.image-propos2 {
+  grid-area: image-propos-deux;
+  width: 30%;
+  transition: .2s ease-in-out;
+}
+.image-propos2:hover {
+  filter: brightness(60%);
+  transition: .2s ease-in-out;
+}
+.image-propos3 {
+  grid-area: image-propos-trois;
+  width: 30%;
+}
+.image-propos3:hover {
+  filter: brightness(60%);
+}
+/**************END images sous a propos****************/
+/**************services et horaires**********************/
+.services-horaires {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px !important;
+  width: 80%;
+  background-color: #bc8f8f38;
+  padding: 40px;
+  margin: 0 auto;
+}
+/***********END services et horaires***********************/
+/**********coordonnées*******************************/
+.nos-coordonnees {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px !important;
+  margin: 0 auto;
+}
+.map{
+  width: 60%;
+  padding-left: 30px;
+}
+.map h2 {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+.adresse a {
+  color: #333333;
+  font-size: 18px !important;
+}
+.adresse a:hover {
+  padding-left: 10px;  
+  transition: .2s ease-in-out;
+  color: #B08E92;
+  text-decoration: none;
+}
+.adresse li {
+  font-size: 18px !important;
+}
+.adresse {
+  grid-area: adresse;
+  width: 40%;
+  line-height: 2.2; 
+  font-size: 18px !important;
+}
+.adresse h2 {
+  text-align: left;
+  margin-bottom: 1.2em;
+}
+.titre-coordonnees{
+  width: 100% !important;
+  text-align: center;
+  margin-top: 60px;
+}
+/************END coordonnées************************/
+iframe {
+  width: 80%;
+  height: 100%;
+}
+.entete-home h1 {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 8%;
+}
+.entete-home p {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 4%;
+  padding-right: 12%;
+  padding-left: 12%;
+}
+.entete-home ul li {
+  display: inline-block;
+  padding-top: 3%;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+.bouton-entete {
+  color: #ffffff !important;
+  text-decoration: none;
+  text-transform: uppercase !important;
+  border-bottom: 6px solid;
+  border-radius: 35%;
+  padding: 10px;
+}
+/****************footer********************/
+.footer-1 {
+  display: flex;
+  padding: 30px !important;
+  margin-top: 60px;
+  background-color: #B08E92;
+  color: #ffffff !important;
+}
+.footer-1 h3 {
+  text-transform: uppercase;
+}
+.footer-1 a {
+  color: #ffffff; 
+}
+.footer-1 a:hover {
+  color: #c0c0c0; 
+  text-decoration: none;
+}
+.colonne-footer-1 {
+  width: 33%;
+}
+.colonne-footer-2 {
+  width: 33%;
+}
+.colonne-footer-3 {
+  width: 33%;
+}
+/***************footer copy******************/
+.footer-2 {
+  text-align: center;
+  padding-top: 5px;
+}
+.footer-2 a {
+  color: #B08E92;
+  text-decoration: none;
+}
+.footer-2 a:hover {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+/****************END footer copy*****************/
+/*.lien-menu:hover {
+  background-color: #B08E92;
+  color: #ffffff;
+}*/
+.bouton-entete:hover {
+  text-decoration: none;
+  border-bottom-color: #000000;
+}
+.entete-home ul {
+  display: flex;
+  justify-content: center;
+}
+.footer-home {
+  grid-area: footer-home;
+}
+header {
+  grid-area: menu;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	background-color: #ffffff;
+  box-shadow: 0px 0px 15px;
+	height: 75px;
+	border-bottom: 1px solid #c0c0c0;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+  z-index: 999999;
+}
+header a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+}
+header a:hover {
+	text-decoration: none;
+    background-color: #B08E92;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    transition: .2s ease-in-out;
+}
+.LOGO {
+	margin-top: -27px;
+  width: 50%;
+}
+.hover-logo:hover {
+  background-color: inherit !important;
+}
+.main-wrapper {
+  width: 100%;
+  max-width: 5000px;
+  margin: auto;
+  background-color: #34495e;
+  position: absolute;
+}
+.nav-wrapper {
+  width: 100%;
+  max-width: 90%;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+.nav {
+  margin-left: 60%;
+}
+.logo {
+  position: absolute;
+  margin: 0px;
+}
+.logo h1 {
+  padding-left: 5px;
+  margin: 0px; 
+}
+.nav ul {
+  margin-top: 15px;  
+}
+.nav ul li {
+  display: inline-block;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif !important;
+  color: white;
+}
+/* mobile bar view */
+.mobile-nav {
+  width: 100%;
+  height: 40px;
+  display: none;  
+}
+/* mobile view */
+@media (max-width: 955px) { 
+  .mobile-nav {
+  display: block;
+  }  
+.nav ul li {
+  display: block;  
+}
+.nav-wrapper {
+  overflow: hidden;
+}
+.nav {
+  width: 200px;
+  margin: auto;
+}
+.mobile-wrapper {
+  display: block;  
+}
+/* end of responsive style */
+/* menu icon styles */
+/* style for each bar */ 
+.responsive-menu-icon-line {
+  width: 40px;
+  height: 5px;
+  background-color: #000000;
+  margin: 7px;
+  border-radius: 2px;
+/* this determines animation speed */
+  transition: all 1s ease;
+}
+/* classes to add for each animation */ 
+.rotate-down {
+  margin-bottom: -12px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+.rotate-up {
+  margin-top: -12px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg); 
+}
+.disappear {
+  opacity: 0;
+}
+/* grouping div for all bars */
+.responsive-menu-icon {
+  width: 60px;
+  padding: 3px;
+  margin-left: 85%;
+  margin-top: 12px;
+/* this determines animation speed */
+  transition: all 1s ease; 
+}
+/* animation class to keep icon in similar place after animations */
+.menu-up {
+  padding-top: 15px;
+}
+}
+@media (min-width: 1200px){
+.container {
+    width: 100% !important;
+}
+}
+@media (min-width: 992px){
+.container {
+    width: 100% !important;
+}
+}
+@media (min-width: 768px){
+.container {
+    width: 100% !important;
+}
+}
+@media only screen and (max-width: 1266px) and (min-width: 954px) {
+  .nav {
+  margin-left: 40%;
+}
+}
+@media only screen and (max-width: 1120px) and (min-width:930px){
+  .notre-etablissement {
+  margin-top: 40px;
+  width: 100%;
+}
+.etablissement-gauche {
+  grid-area: etablissement-gauche;
+  width: 100%;
+  padding: 30px;
+}
+.etablissement-droit {
+  grid-area: etablissement-droit;
+  width: 100%;
+  padding: 30px;
+}
+/**************services et horaires**********************/
+.services-horaires {
+  width: 90%;
+  padding: 20px;
+}
+/***********END services et horaires***********************/
+}
+@media only screen and (max-width: 929px) and (min-width: 481px){
+  .container {
+    grid-template-areas: 
+    "menu menu menu menu menu menu menu menu"
+    "entete-home entete-home entete-home entete-home entete-home entete-home entete-home entete-home"
+    "etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche"
+    "etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit"
+    "footer-home footer-home footer-home footer-home footer-home footer-home footer-home footer-home";
+}
+.nos-coordonnees {
+  flex-direction: column;
+}
+.LOGO {
+    margin-top: -25px;
+    width: 200px;
+}
+.map {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+}
+iframe {
+    width: 100%;
+    height: 350px !important;
+}
+.adresse {
+  width: 100%;
+  padding: 0px 30px 0px 30px;
+  line-height: 1.9;
+  font-size: 16px !important;
+}
+.adresse h2 {
+    text-align: center;
+}
+.notre-etablissement {
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+.etablissement-gauche {
+  grid-area: etablissement-gauche;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+}
+.etablissement-droit {
+  grid-area: etablissement-droit;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+}
+.image-a-propos {
+  flex-direction: column;
+  align-content: space-evenly;
+  justify-content: inherit;
+  margin: 0 auto;
+  margin-top: 40px !important;
+}
+.image-propos1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.image-propos2 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.image-propos3 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.nav {
+    width: 80% !important;
+    margin: auto !important;
+    margin-top: 23px !important;
+    background-color: rgba(255,255,255,0.97) !important;
+    text-align: center !important;
+}
+/**************services et horaires**********************/
+.services-horaires {
+  flex-direction: column;
+  justify-content: inherit;
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+}
+/***********END services et horaires***********************/
+.colonne-footer-1 {
+  width: 33%;
+} 
+.colonne-footer-2 {
+  width: 33%;
+}
+.colonne-footer-3 {
+  width: 33%;
+}
+.bandeau-bas {
+    height: 370px;
+    background-size: cover;
+}
+.footer-1 {
+  flex-direction: column;
+}
+.colonne-footer-1 {
+    width: 100%;
+}
+.colonne-footer-2 {
+    width: 100%;
+}
+.colonne-footer-3 {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 480px){
+  .container {
+    grid-template-areas: 
+    "menu menu menu menu menu menu menu menu"
+    "entete-home entete-home entete-home entete-home entete-home entete-home entete-home entete-home"
+    "etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche etablissement-gauche"
+    "etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit etablissement-droit"
+    "footer-home footer-home footer-home footer-home footer-home footer-home footer-home footer-home";
+}
+.bandeau-bas {
+    height: 250px;
+    background-size: contain;
+}
+.nos-coordonnees {
+  flex-direction: column;
+}
+.map {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+}
+.LOGO {
+    margin-top: -14px;
+    width: 200px;
+}
+iframe {
+    width: 100%;
+    height: 300px !important;
+}
+.adresse {
+  width: 100%;
+  padding: 0px 30px 0px 30px;
+  line-height: 1.9;
+  font-size: 16px !important;
+}
+.adresse h2 {
+    text-align: center;
+}
+.responsive-menu-icon {
+  margin-left: 80%;
+}
+  .nav {
+    width: 80% !important;
+    margin: auto !important;
+    margin-top: 23px !important;
+    background-color: rgba(255,255,255,0.97) !important;
+    text-align: center !important;
+}
+.entete-home ul {
+  flex-direction: column;
+  align-items: center;
+}
+.entete-home {
+  height: 390px;
+}
+.bouton-entete {
+  line-height: 2.8;
+}
+a, p, span, li {
+  font-size: 14px;
+}
+h1, h2 {
+  font-size: 30px !important;
+}
+.notre-etablissement {
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+.etablissement-gauche {
+  grid-area: etablissement-gauche;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+}
+.etablissement-droit {
+  grid-area: etablissement-droit;
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+}
+.image-a-propos {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-content: space-evenly;
+  margin-top: 30px !important;
+}
+.image-propos1 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.image-propos2 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.image-propos3 {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+/**************services et horaires**********************/
+.services-horaires {
+  flex-direction: column;
+  justify-content: inherit;
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+}
+/***********END services et horaires***********************/
+.footer-1 {
+  flex-direction: column;
+}
+.colonne-footer-1 {
+    width: 100%;
+}
+.colonne-footer-2 {
+    width: 100%;
+}
+.colonne-footer-3 {
+    width: 100%;
+}
+}
