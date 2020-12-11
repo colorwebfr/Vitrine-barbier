@@ -1,6 +1,18 @@
 $(document).ready(function() 
 {
   
+  //fonction permettant de fermer le menu déroulant apres le click d'un lien
+  $(".lien-menu").click(function()
+  {
+      var nav = $(".nav-wrapper");
+      TweenMax.to(nav, 1, {"height":50});
+      $("#a").removeClass("rotate-down");
+      $("#responsive-menu-icon").removeClass("menu-up");
+      $("#b").removeClass("disappear");
+      $("#c").removeClass("rotate-up");
+  });
+  // END
+
   $( "#responsive-menu-icon" ).click(function() 
   {
     var nav = $(".nav-wrapper");
